@@ -7,15 +7,13 @@
 body {
     font-family: system-ui, Arial, sans-serif;
     line-height: 1.5;
-    color: #222;
-    background-color: rgb(1, 28, 41);
+    background-color: rgb(255, 255, 255);
 }
 
 .all{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
 }
 
 .block{
@@ -30,17 +28,38 @@ body {
     gap: 20px;
 }
 
-.container {
+header {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background: rgb(2, 88, 131);
+    padding: 20px;
+    gap: 40 px;
+}
+
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 20px;
-    width: 400px;
+    width: 100%;
+}
+
+.aca {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.container#tecnologias {
+    grid-column: span 2;
+    background-color: #f8f8f8;
     border-radius: 12px;
     border: 2px solid rgb(167, 198, 206);
-    background: rgb(16, 67, 134);
-    box-shadow: 0px 8px 20px rgba(107, 184, 255, 0.555);
+    box-shadow: 0px 8px 20px rgb(1, 28, 41);
 }
 
 #descripcion {
@@ -51,6 +70,22 @@ body {
     padding: 5px;
 }
 
+#about {
+    color: #333;
+    font-family: 'italic';
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 30%;
+}
+
+span {
+    color: #00bcd4;
+    font-weight: 600;
+}
+
 #foto-carnet {
     width: 120px;
     height: 120px;
@@ -59,3 +94,77 @@ body {
     background-color: #222;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border: 2px solid #333;
+    border-radius: 12px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #222;
+}
+
+.cards#Proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.foto-proyecto {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.foto-proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+footer {
+    display: flex;
+    background: rgb(2, 88, 131);
+    padding: 20px;
+}
+
+.contactos {
+    display:grid;
+    grid-template-columns: repeat(3,200px);
+    gap: 100px;
+}
+
+h3 {
+    color:#222;
+}
+
+.contacto a {
+  text-decoration: none;
+  color: #333;
+}
