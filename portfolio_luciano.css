@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:#f8f8f8;
 }
 
 body {
-    font-family: system-ui, Arial, sans-serif;
+    font-family: italic;
     line-height: 1.5;
-    background-color: rgb(255, 255, 255);
+    background: rgb(233, 236, 239);
 }
 
 .all{
@@ -28,14 +29,6 @@ body {
     gap: 20px;
 }
 
-header {
-    display: flex;
-    width: 100%;
-    height: 150px;
-    background: rgb(2, 88, 131);
-    padding: 20px;
-    gap: 40 px;
-}
 
 .container{
     display: flex;
@@ -55,11 +48,9 @@ header {
 }
 
 .container#tecnologias {
-    grid-column: span 2;
-    background-color: #f8f8f8;
-    border-radius: 12px;
-    border: 2px solid rgb(167, 198, 206);
-    box-shadow: 0px 8px 20px rgb(1, 28, 41);
+    grid-column: span 3;
+    margin-top: 170px;
+    color:#f8f8f8;
 }
 
 #descripcion {
@@ -71,7 +62,6 @@ header {
 }
 
 #about {
-    color: #333;
     font-family: 'italic';
     font-size: 28px;
     font-weight: 500;
@@ -101,10 +91,31 @@ img {
     object-position: center;
 }
 
+.titulo {
+    width: 100%;
+}
+
+.titulo h2 {
+    margin-bottom: 10px;
+    transform: translateX(0);
+    transition: all 3s ease;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.titulo:hover h2 {
+    transform: translateX(40vw);
+    background: rgba(33, 37, 41, 0.377);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(63, 63, 63, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -115,8 +126,16 @@ img {
     align-items: center;
     padding: 10px;
     gap: 10px;
-    border: 2px solid #333;
+    background: rgba(73, 80, 87, 0.377);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.60);
 }
 
 h1 {
@@ -125,7 +144,9 @@ h1 {
 
 h2 {
     font-size: 36px;
-    color: #222;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cards#Proyectos {
@@ -150,8 +171,9 @@ h2 {
 
 footer {
     display: flex;
-    background: rgb(2, 88, 131);
-    padding: 20px;
+    background: linear-gradient(180deg,rgb(73, 80, 87),rgb(33, 37, 41));
+    position :relative;
+    padding: 20px , 0;
 }
 
 .contactos {
@@ -160,11 +182,15 @@ footer {
     gap: 100px;
 }
 
+p {
+    font-family: 'Raleway';
+    font-size: 200;
+    font-style: normal;
+}
+
 h3 {
-    color:#222;
 }
 
 .contacto a {
   text-decoration: none;
-  color: #333;
 }
