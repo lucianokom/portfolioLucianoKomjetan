@@ -2,194 +2,304 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:#f8f8f8;
 }
 
 body {
-    font-family: italic;
-    line-height: 1.5;
-    background: linear-gradient(90deg,rgb(170, 161, 200),rgb(150, 122, 161));
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    background-color: rgb(19, 21, 21);
+    color: aliceblue;
 }
 
-.all{
+
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(10px);
+}
+
+.contenedor_header {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 70px;
+    padding: 20px 10px;
 }
 
-.block{
+.button_home {
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.home_section {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(files/images.jpg) no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    border-radius: 12px;
-    background: #f8f8f8;
-    padding: 20px;
-    gap: 20px;
 }
 
-
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-}
-
-.aca {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.container#tecnologias {
-    grid-column: span 3;
-    margin-top: 170px;
-    color:#f8f8f8;
-}
-
-#descripcion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 5px;
-}
-
-#about {
-    font-family: 'italic';
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-top: 30%;
-}
-
-span {
-    color: #00bcd4;
-    font-weight: 600;
-}
-
-#foto-carnet {
+.img_home {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
     overflow: hidden;
-    background-color: #222;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
-img {
+.img_home img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    display: block;
 }
 
-.titulo {
+span {
+    color: rgba(7, 177, 177, 0.973);
+    font-size: 26px;
+}
+
+.aboutme_section {
     width: 100%;
+    height: 80vh;
+    padding: 30px;
 }
 
-.titulo h2 {
-    margin-bottom: 10px;
-    transform: translateX(0);
-    transition: all 3s ease;
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-.titulo:hover h2 {
-    transform: translateX(40vw);
-    background: rgba(33, 37, 41, 0.377);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 24px rgba(63, 63, 63, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.cards {
-    width: 100%;
-    display:flex;
+.description {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-.card {
+.description_text {
+    border: 2px, solid, rgba(39, 43, 43,0.2);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.data {
+    width: 100%;
+    height: 50%;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
-    background: transparent;
-    border: 2px, solid, rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
+}
+
+ul {
+    margin-right: auto;
+}
+
+.data span {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cv {
+    padding: 20px;
+    margin: auto;
     border-radius: 12px;
+    border: 2px  solid rgba(7, 177, 177, .5);
+    background-color: rgba(7, 177, 177, 0.973);
     transition: 0.5s;
 }
 
-.card:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.60);
-}
-
-h1 {
-    font-size: 48px;
+.cv:hover {
+    box-shadow: 0px 0px 10px rgba(7, 177, 177,0.9);
 }
 
 h2 {
     font-size: 36px;
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-style: normal;
 }
 
-.cards#Proyectos {
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color:rgba(7, 177, 177, 0.973);
+    margin-top: 5px;
+}
+
+.technology_section {
+    padding: 30px;
+    width: 100%;
+}
+
+.cards_tech {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tech_card {
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 2px, solid, rgba(34, 39, 39, 0.2);
+    border-radius: 12px;
+    background-color: rgb(34, 39, 39);
+    gap: 5px;
 }
 
-.foto-proyecto {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
+i {
+    font-size: 46px;
+    transition: 0.5s;
 }
 
-.foto-proyecto img {
+i:hover {
+    color: rgb(7, 177, 177);
+}
+
+.projects_section {
+    padding: 30px;
     width: 100%;
+}
+
+.cards_project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project_card {
+    width: 100%;
+    height: 225px;
+    background-color: rgb(34, 39, 39);
+    padding: 10px;
+    border-radius: 12px;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.project_card::after, .project_card::before {
+    content: '';
+    position: absolute;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 12px;
+    background: conic-gradient(from var(--angle), rgb(50, 153, 153),rgb(255, 255, 255),rgb(124, 226, 226),rgb(255, 255, 255));
+    animation: 25s spin linear infinite;
+}
+
+.project_card::before {
+    filter: blur(1.5rem);
+    opacity: 0.3;
+}
+
+.project_card:hover::after, .project_card:hover::before {
+    animation: 5s spin linear infinite;
+} 
+
+@keyframes spin {
+    from {
+        --angle:0deg;
+    }
+    to {
+        --angle:360deg;
+    }
+}
+
+.links_project {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.link {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg,rgb(14, 206, 206),rgb(2, 160, 160));
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 12px;
 }
 
-footer {
-    display: flex;
-    background: linear-gradient(180deg,rgb(73, 80, 87),rgb(33, 37, 41));
-    position :relative;
-    padding: 20px , 0;
-}
-
-.contactos {
-    display:flex;
-    flex-direction: row;
-    gap: 1em;
-}
-
-p {
-    font-family: 'Raleway';
-    font-size: 200;
-    font-style: normal;
-}
-
 h3 {
+    font-weight: 900;
 }
 
-.contacto a {
-  text-decoration: none;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contactme_section {
+    padding: 30px;
+}
+.contact_block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    border:2px solid rgb(34, 39, 39);
+    margin-top: 30px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.contact form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact input,
+.contact textarea {
+    width: 50vw;
+    padding: 10px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    color: white;
+}
+
+.contact button {
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(7,177,177), rgb(2,160,160));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
 }
