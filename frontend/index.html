@@ -34,7 +34,7 @@
     <main>
         <section class="home_section" id="home">
             <div class="img_home">
-                <img src="files/foto.jpeg" alt="">
+                <img src="assets/foto.jpeg" alt="">
             </div>
             <h1><span>Luciano Komjetan</span></h1>
             <p class="text">Estudiante y developer</p>
@@ -82,7 +82,7 @@
                         </li>
                     </ul>
                     <div class="cv">
-                        <a href="files/CVLuciano_Komjetan.pdf" download="CVLuciano_Komjetan.pdf">Descargar CV</a>
+                        <a href="assets/CVLuciano_Komjetan.pdf" download="CVLuciano_Komjetan.pdf">Descargar CV</a>
                     </div>
                 </div>
             </div>
@@ -168,10 +168,10 @@
             <div class="contact_block">
                 <div class="contact">
                     <h3>Enviame un mail</h3>
-                    <form action="https://formspree.io/f/xzdjddqv" method="POST">
-                        <input type="text" name="name" placeholder="Tu nombre" required>
-                        <input type="email" name="email" placeholder="Tu email" required>
-                        <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
+                    <form id="contact-form">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
                         <button type="submit">Enviar mensaje</button>
                     </form>
                 </div>
