@@ -5,19 +5,47 @@ export function obtenerContacto(req,res){
 }
 
 export async function crearContacto(req,res){
+    const error = check_data(req,res);
+    
+    if (error) {
+
+        console.error(error);
+
+        return res.status(400).json({
+            error: error
+        });
+    }
+
      try {
 
         const contacto = await guardarContacto(req.body);
 
-        res.status(201).json(contacto);
+        return res.status(201).json({
+            mensaje: "Contacto enviado correctamente"
+        });
 
-    } catch (error) {
+    } catch (exepcion) {
 
-        console.error(error);
+        console.error(exepcion);
 
-        res.status(500).json({
-            error: "Error al guardar el contacto"
+        return res.status(500).json({
+            exepcion: "Error al guardar el contacto"
         });
 
     }
+}
+
+const check_data = (req,res) => {
+    const {nombre, email, mensaje} = req.body;
+    if (nombre.trim() === ""){
+        return "El nombre es vacio";
+    } 
+    if (email.trim() === ""){
+        return "El email es obligatorio";
+    }
+    if (mensaje.trim() === ""){
+        return "El mensaje es vacio";
+    } 
+
+    return null;
 }

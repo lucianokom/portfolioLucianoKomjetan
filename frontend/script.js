@@ -6,7 +6,11 @@ btn1.addEventListener("click", () => {
 
 const formulario = document.getElementById("contact-form");
 
+const mensajeFormulario = document.getElementById("respuesta-form");
+
 formulario.addEventListener("submit", async(e) => {
+
+    event.preventDefault();
 
      const datos = {
         nombre: document.getElementById("name").value,
@@ -24,8 +28,16 @@ formulario.addEventListener("submit", async(e) => {
             body: JSON.stringify(datos)
         }
     );
-    
-    const resultado = await respuesta.json();
 
-    console.log(resultado);
+     const res = await respuesta.json();
+
+    if (respuesta.ok) {
+
+        mensajeFormulario.textContent = res.mensaje;
+
+    } else {
+
+        mensajeFormulario.textContent = res.error;
+
+    }
 })
