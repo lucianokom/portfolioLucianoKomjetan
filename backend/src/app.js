@@ -1,7 +1,7 @@
 import 'dotenv/config';    
 import express from "express";
-import contactoRoutes from "./routes/contactoRoutes.js";
 import cors from "cors";
+import contactoRoutes from "./routes/contactoRoutes.js";
 
 const app = express();
 
@@ -10,6 +10,4 @@ app.use(express.json());
 
 app.use("/contacto", contactoRoutes);
 
-app.listen(3000, () => {
-    console.log("Servidor funcionando en puerto 3000");
-});
+export default app;
