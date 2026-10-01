@@ -1,40 +1,31 @@
 import { guardarContacto } from "../services/contactoService.js";
 import { validateMessage } from "../middlewares/schemas.js";
 
-export function obtenerContacto(req,res){
+export function obtenerContacto(req, res) {
     res.send("controlador de contactos funcionando");
 }
 
-export async function crearContacto(req,res){
+export async function crearContacto(req, res) {
     const result = validateMessage(req.body);
 
-    console.log(result.data)
-
     if (result.error) {
-
-        console.error(error);
-
+        console.error(result.error);
         return res.status(400).json({
-            error: error
+            error: result.error.issues
         });
     }
 
-     try {
-
-        const contacto = await guardarContacto({input : result.data});
-
+    try {
+        const contacto = await guardarContacto({ input: result.data });
         return res.status(201).json({
-            mensaje: "Contacto enviado correctamente"
+            mensaje: "Contacto enviado correctamente",
+            contacto: contacto
         });
-
-    } catch (exepcion) {
-
-        console.error(exepcion);
-
+    } catch (excepcion) {
+        console.error(excepcion);
         return res.status(500).json({
-            exepcion: "Error al guardar el contacto"
+            error: "Error al guardar el contacto"
         });
-
     }
 }
 
