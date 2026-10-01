@@ -5,7 +5,11 @@ import contactoRoutes from "./routes/contactoRoutes.js";
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+    origin: "https://lucianokom.github.io",
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/contacto", contactoRoutes);
