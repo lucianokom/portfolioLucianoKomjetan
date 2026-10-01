@@ -1,4 +1,4 @@
-const API_CONTACTO = "http://localhost:3000/contacto";
+const API_CONTACTO = "https://portfolio-api-gamma-nine.vercel.app/contacto";
 
 const formulario = document.getElementById("contact-form");
 const botonEnviar = formulario.querySelector('button[type="submit"]');
