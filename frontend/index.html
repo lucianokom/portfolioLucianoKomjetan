@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
@@ -19,34 +19,30 @@
 
 <body>
     <header>
-        <div class="contenedor_header">
-            <div class="button_home"><i class="bx bx-power"></i>
-            </div>
-            <nav>
-                <a class="nav_point" href="#home">Home</a>
-                <a class="nav_point" href="#aboutme">About me</a>
-                <a class="nav_point" href="#technology">Technology</a>
-                <a class="nav_point" href="#projects">Projetcs</a>
-                <a class="nav_point" href="#contactme">Contact me</a>
+        <div class="contenedor_header container">
+            <nav aria-label="Navegación principal">
+                <a class="nav_point" href="#home">Inicio</a>
+                <a class="nav_point" href="#aboutme">Sobre mí</a>
+                <a class="nav_point" href="#technology">Tecnologías</a>
+                <a class="nav_point" href="#projects">Proyectos</a>
+                <a class="nav_point" href="#contactme">Contáctame</a>
             </nav>
         </div>
     </header>
+
     <main>
         <section class="home_section" id="home">
             <div class="img_home">
-                <img src="assets/foto.jpeg" alt="">
+                <img src="assets/foto.jpeg" alt="Foto de Luciano Komjetan" width="120" height="120">
             </div>
             <h1><span>Luciano Komjetan</span></h1>
-            <p class="text">Estudiante y developer</p>
+            <p class="text">Estudiante y desarrollador</p>
         </section>
+
         <section class="aboutme_section" id="aboutme">
-            <div class="img_aboutme">
-                <img src="" alt="">
-            </div>
-            <div class="description">
-                <div class="titulo_section">
-                    <span>Hola</span>
-                    <h2>Sobre mi</h2>
+            <div class="description container">
+                <div class="section_header">
+                    <h2>Sobre mí</h2>
                 </div>
 
                 <div class="description_text">
@@ -59,26 +55,27 @@
                         de software. Además, disfruto continuar aprendiendo y mejorando constantemente mis habilidades
                         en el área de la programación.</p>
                 </div>
+
                 <div class="data">
                     <ul>
                         <li>
-                            <p><span> Nombre:</span> Luciano Komjetan Acosta
+                            <p><span class="data_label">Nombre:</span> Luciano Komjetan Acosta</p>
+                        </li>
+                        <li>
+                            <p><span class="data_label">Teléfono:</span>
+                                <a href="tel:+59898014658">+598 98 014 658</a>
                             </p>
                         </li>
                         <li>
-                            <p><span>Telefono:</span> +59898014658</p>
-                        </li>
-                        <li>
-                            <p><span>Email:</span> luciano.komjetan@gmail.com</p>
+                            <p><span class="data_label">Email:</span>
+                                <a href="mailto:luciano.komjetan@gmail.com">luciano.komjetan@gmail.com</a>
                             </p>
                         </li>
                         <li>
-                            <p><span>Edad:</span> 21
-                            </p>
+                            <p><span class="data_label">Edad:</span> 21</p>
                         </li>
                         <li>
-                            <p><span>Residencia:</span> Montevideo, Uruguay
-                            </p>
+                            <p><span class="data_label">Residencia:</span> Montevideo, Uruguay</p>
                         </li>
                     </ul>
                     <div class="cv">
@@ -87,97 +84,130 @@
                 </div>
             </div>
         </section>
-        <section class="technology_section" id="technology">
-            <h2>Tecnologias</h2>
-            <div class="cards_tech">
-                <div class="tech_card"><i class="devicon-java-plain"></i>Java</div>
-                <div class="tech_card"><i class="devicon-cplusplus-plain"></i>C++</div>
-                <div class="tech_card"><i class="devicon-html5-plain"></i>HTML</div>
-                <div class="tech_card"><i class="devicon-css3-plain"></i>CSS</div>
-                <div class="tech_card"><i class="devicon-javascript-plain"></i>JS</div>
-                <div class="tech_card"><i class="devicon-git-plain"></i>GIT</div>
-                <div class="tech_card"><i class="devicon-github-original"></i>Github</div>
-                <div class="tech_card"><i class="devicon-bash-plain"></i>Bash</div>
 
+        <section class="technology_section" id="technology">
+            <div class="container">
+                <div class="section_header">
+                    <h2>Tecnologías</h2>
+                </div>
+                <ul class="cards_tech">
+                    <li class="tech_card"><i class="devicon-java-plain" aria-hidden="true"></i>Java</li>
+                    <li class="tech_card"><i class="devicon-cplusplus-plain" aria-hidden="true"></i>C++</li>
+                    <li class="tech_card"><i class="devicon-html5-plain" aria-hidden="true"></i>HTML</li>
+                    <li class="tech_card"><i class="devicon-css3-plain" aria-hidden="true"></i>CSS</li>
+                    <li class="tech_card"><i class="devicon-javascript-plain" aria-hidden="true"></i>JS</li>
+                    <li class="tech_card"><i class="devicon-git-plain" aria-hidden="true"></i>GIT</li>
+                    <li class="tech_card"><i class="devicon-github-original" aria-hidden="true"></i>GitHub</li>
+                    <li class="tech_card"><i class="devicon-bash-plain" aria-hidden="true"></i>Bash</li>
+                </ul>
             </div>
         </section>
+
         <section class="projects_section" id="projects">
-            <span>Todos mis</span>
-            <h2>Proyectos</h2>
-            <div class="cards_project">
-                <div class="project_card">
-                    <h3>Proyecto Academico en Java</h3>
-                    <p>Desarrollo de una aplicación dentro del ecosistema Java / Java EE basada en una arquitectura
-                        cliente-servidor. El sistema cuenta con un servidor central desarrollado en Java con interfaz
-                        gráfica en Java Swing, destinado a la gestión y administración del sistema por parte del
-                        administrador. Paralelamente, se implementó un servidor web utilizando tecnologías JSP y
-                        Servlets, encargado de servir la aplicación web accesible para los usuarios a través del
-                        navegador. La aplicación fue diseñada siguiendo el patrón arquitectónico MVC
-                        para garantizar la separación entre la lógica de negocio, la capa de
-                        presentación y el control de la aplicación. El proyecto fue estructurado y gestionado mediante
-                        Apache Maven para la gestión de dependencias y el proceso de construcción. </p>
-                    <div class="links_project">
-                        <button class="link">
-                            Repositorie
-                        </button>
-                        <div class="link">
-                            <a href="">Documentation</a>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="section_header">
+                    <h2>Proyectos</h2>
                 </div>
-                <div class="project_card">
-                    <h3>Proyecto Academico en C++</h3>
-                    <p>Desarrollo de una aplicación en C++ ejecutada en entorno de consola, implementando una interfaz
-                        de interacción basada en menús para la gestión de operaciones del sistema. El proyecto fue
-                        desarrollado aplicando el paradigma de Programación Orientada a Objetos (POO), utilizando
-                        conceptos como encapsulamiento, abstracción y organización modular del código mediante clases y
-                        métodos. La aplicación gestiona la lógica del programa a través de estructuras de control y
-                        manejo de datos en memoria, permitiendo una interacción clara y estructurada con el usuario
-                        desde la interfaz de consola.</p>
-                    <div class="links_project">
-                        <button class="link">
-                            Repositorie
-                        </button>
-                        <div class="link">
-                            <a href="">Documentation</a>
+
+                <div class="cards_project">
+                    <article class="project_card">
+                        <h3>Proyecto Académico en Java</h3>
+                        <p>Desarrollo de una aplicación dentro del ecosistema Java / Java EE basada en una arquitectura
+                            cliente-servidor. El sistema cuenta con un servidor central desarrollado en Java con interfaz
+                            gráfica en Java Swing, destinado a la gestión y administración del sistema por parte del
+                            administrador. Paralelamente, se implementó un servidor web utilizando tecnologías JSP y
+                            Servlets, encargado de servir la aplicación web accesible para los usuarios a través del
+                            navegador. La aplicación fue diseñada siguiendo el patrón arquitectónico MVC
+                            para garantizar la separación entre la lógica de negocio, la capa de
+                            presentación y el control de la aplicación. El proyecto fue estructurado y gestionado mediante
+                            Apache Maven para la gestión de dependencias y el proceso de construcción.</p>
+                        <div class="links_project">
+                            <span class="link-disabled" aria-disabled="true" title="Repositorio — próximamente">Repositorio</span>
+                            <span class="link-disabled" aria-disabled="true" title="Documentación — próximamente">Documentación</span>
                         </div>
-                    </div>
-                </div>
-                <div class="project_card">
-                    <h3>Repositorio</h3>
-                    <p>Desarrollo de un repositorio web estático implementado utilizando HTML y CSS, enfocado en la
-                        construcción de interfaces web modernas y estructuradas. El proyecto incluye la maquetación y
-                        organización de componentes visuales mediante Flexbox y técnicas de diseño responsive,
-                        permitiendo una correcta adaptación a diferentes tamaños de pantalla. Se aplicaron buenas
-                        prácticas de estructura semántica en HTML y modularización de estilos en CSS para mejorar la
-                        mantenibilidad y escalabilidad del código. El repositorio fue gestionado mediante Git para el
-                        control de versiones y organización del desarrollo.</p>
-                    <div class="links_project" id="btnProyecto-repositorie">
-                        <button class="link">
-                            Repositorie
-                        </button>
-                        <div class="link-disabled">
-                            <a href="">Not documentation</a>
+                        <p class="aviso">Repositorio y documentación: próximamente</p>
+                    </article>
+
+                    <article class="project_card">
+                        <h3>Proyecto Académico en C++</h3>
+                        <p>Desarrollo de una aplicación en C++ ejecutada en entorno de consola, implementando una interfaz
+                            de interacción basada en menús para la gestión de operaciones del sistema. El proyecto fue
+                            desarrollado aplicando el paradigma de Programación Orientada a Objetos (POO), utilizando
+                            conceptos como encapsulamiento, abstracción y organización modular del código mediante clases y
+                            métodos. La aplicación gestiona la lógica del programa a través de estructuras de control y
+                            manejo de datos en memoria, permitiendo una interacción clara y estructurada con el usuario
+                            desde la interfaz de consola.</p>
+                        <div class="links_project">
+                            <span class="link-disabled" aria-disabled="true" title="Repositorio — próximamente">Repositorio</span>
+                            <span class="link-disabled" aria-disabled="true" title="Documentación — próximamente">Documentación</span>
                         </div>
-                    </div>
+                        <p class="aviso">Repositorio y documentación: próximamente</p>
+                    </article>
+
+                    <article class="project_card">
+                        <h3>Portafolio web</h3>
+                        <p>Desarrollo de un portafolio web estático implementado utilizando HTML y CSS, enfocado en la
+                            construcción de interfaces web modernas y estructuradas. El proyecto incluye la maquetación y
+                            organización de componentes visuales mediante Flexbox y técnicas de diseño responsive,
+                            permitiendo una correcta adaptación a diferentes tamaños de pantalla. Se aplicaron buenas
+                            prácticas de estructura semántica en HTML y modularización de estilos en CSS para mejorar la
+                            mantenibilidad y escalabilidad del código. El repositorio fue gestionado mediante Git para el
+                            control de versiones y organización del desarrollo.</p>
+                        <div class="links_project">
+                            <a class="link" href="https://github.com/lucianokom/portfolioLucianoKomjetan" target="_blank"
+                                rel="noopener noreferrer">Repositorio</a>
+                            <span class="link-disabled" aria-disabled="true" title="Documentación — próximamente">Documentación</span>
+                        </div>
+                        <p class="aviso">Documentación: próximamente</p>
+                    </article>
                 </div>
             </div>
         </section>
+
         <section class="contactme_section" id="contactme">
-            <h2>Contactame</h2>
-            <div class="contact_block">
-                <div class="contact">
-                    <h3>Enviame un mail</h3>
-                    <form id="contact-form">
-                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                        <input type="email" id="email" name="email" placeholder="Tu email" required>
-                        <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
-                        <button type="submit">Enviar mensaje</button>
-                        <p id="respuesta-form"></p>
-                    </form>
+            <div class="container">
+                <div class="section_header">
+                    <h2>Contáctame</h2>
+                </div>
+
+                <div class="contact_block">
+                    <div class="contact">
+                        <h3>Envíame un mail</h3>
+                        <form id="contact-form">
+                            <div class="field">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"
+                                    autocomplete="name" minlength="2" maxlength="80" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com"
+                                    autocomplete="email" maxlength="120" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="6"
+                                    minlength="10" maxlength="2000" required></textarea>
+                            </div>
+
+                            <button type="submit">Enviar mensaje</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <dialog class="modal" id="modal-estado" aria-labelledby="modal-titulo" aria-describedby="modal-detalle">
+        <i class="modal_icono" id="modal-icono" aria-hidden="true"></i>
+        <h4 class="modal_titulo" id="modal-titulo"></h4>
+        <div class="modal_detalle" id="modal-detalle"></div>
+        <button class="modal_boton" id="modal-cerrar" type="button">Cerrar</button>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
+
+</html>
